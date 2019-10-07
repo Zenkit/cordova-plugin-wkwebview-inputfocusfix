@@ -1,5 +1,19 @@
-# THIS PLUGIN IS DEPRECATED!
+# CDVWKWebViewEngine InputFocusFix
 
-This plugin was introduced as a temporary fix for the input focusing issue raised on main WKWebView repositories of Apache and Ionic. As the changes are merged to the main repositories - https://github.com/apache/cordova-plugin-wkwebview-engine/pull/37/ and https://github.com/ionic-team/cordova-plugin-wkwebview-engine/pull/171, the plugin is deprecated and has no effect on fixing any focus issues anymore. 
+> Cordova plugin for fixing auto focus issue of html elements on WKWebView
 
-## If you're facing issues with the input focusing, simply upgrade your wkwebview cordova plugin to it's latest version. And if your issue still exists after the upgrade, open an issue on the main wkwebview cordova repo: https://github.com/apache/cordova-plugin-wkwebview-engine/issues.  
+This plugin adds support for the `KeyboardDisplayRequiresUserAction` setting when using the `CDVWKWebViewEngine`, by swizzling of the `WKContentView`.
+_This plugin works for iOS 13.0, 12.2, 11.x and 10.x_
+
+## Installation
+
+Install the plugin by running:
+
+```sh
+cordova plugin add github:zenkit/cordova-plugin-wkwebview-inputfocusfix
+```
+
+## Why the fork?
+
+The [original plugin](https://github.com/onderceylan/cordova-plugin-wkwebview-inputfocusfix) was archived because it shouldn't be needed anymore.
+But this seems only to be true when using the `cordova-plugin-ionic-webview` and it is still needed when using the `cordova-plugin-wkwebview-engine` because it will not be [fixed]((https://issues.apache.org/jira/browse/CB-12037?focusedCommentId=16538144&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16538144).

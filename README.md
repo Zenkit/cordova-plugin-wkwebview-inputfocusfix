@@ -10,7 +10,7 @@ _This plugin works for iOS 13.0, 12.2, 11.x and 10.x_
 Install the plugin by running:
 
 ```sh
-cordova plugin add github:zenkit/cordova-plugin-wkwebview-inputfocusfix
+cordova plugin add github:zenkit/cordova-plugin-wkwebview-inputfocusfix#v1.0.5
 ```
 
 ## Why the fork?

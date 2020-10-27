@@ -1,26 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-wkwebview-inputfocusfix" 
-		version="1.0.5"
-        xmlns="http://cordova.apache.org/ns/plugins/1.0"
-        xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:rim="http://www.blackberry.com/ns/widgets"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-	<name>WKWebView Input Focus Fix</name>
-	<license>MIT</license>
+<plugin
+    id="cordova-plugin-wkwebview-inputfocusfix"
+    version="2.0.0"
+    xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <name>WKWebView Input Focus Fix</name>
+    <license>MIT</license>
 
-	<engines>
-		<engine name="cordova" version=">=3.2.0" />
-	</engines>
+    <engines>
+        <engine name="cordova-ios" version=">=6.0.0" />
+    </engines>
 
-	<platform name="ios">
-		<config-file parent="/*" target="config.xml">
-			<feature name="WKWebViewInputFocusFix">
-				<param name="ios-package" value="WKWebViewInputFocusFix" />
-				<param name="onload" value="true" />
-			</feature>
-		</config-file>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="WKWebViewInputFixPlugin">
+                <param name="ios-package" value="WKWebViewInputFixPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
 
-		<header-file src="src/ios/CDVWKWebViewEngine+InputFocusFix.h" />
-		<source-file src="src/ios/CDVWKWebViewEngine+InputFocusFix.m" />
-	</platform>
+        <source-file src="src/ios/WKWebViewInputFixPlugin.swift" />
+        <source-file src="src/ios/WKWebViewInputFixExtension.swift" />
+        <dependency id="cordova-plugin-add-swift-support" version="^2.0.2" />
+    </platform>
 </plugin>
